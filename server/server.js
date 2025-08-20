@@ -3,6 +3,8 @@ import dotenv, { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import {connectDB} from "./config/db.js";
+import cloudinary from "./config/cloudinary.js";  
+
                                                            
 dotenv.config(); 
 
@@ -23,6 +25,7 @@ app.get("/", (req, res) => {
 });
 
 await connectDB();
+
 app.listen(PORT, () => {
   console.log(`server is running on PORT: ${PORT}`);
 });
