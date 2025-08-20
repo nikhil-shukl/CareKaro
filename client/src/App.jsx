@@ -9,6 +9,7 @@ const App = () => {
       <Toaster />
       <Routes>
         <Route path="/" element={<Landing />} />
+           <Route path="/scan" element={<Scanning />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Common Cold",
+    "symptoms": ["cough", "sneezing", "runny nose", "sore throat"],
+    "description": "A viral infection affecting the nose and throat. Usually mild but can cause discomfort.",
+    "solution": "Rest, drink warm fluids, and take over-the-counter medicines if needed."
+  },
+  {
+    "name": "Fever",
+    "symptoms": ["high temperature", "sweating", "shivering", "weakness"],
+    "description": "Fever is usually a sign that your body is fighting an infection.",
+    "solution": "Stay hydrated, take paracetamol if necessary, and rest well."
+  },
+  {
+    "name": "Headache",
+    "symptoms": ["head pain", "migraine", "sensitivity to light", "stress"],
+    "description": "A common condition that can be caused by stress, dehydration, or migraine.",
+    "solution": "Drink water, rest in a dark room, and take mild pain relievers if needed."
+  },
+  {
+    "name": "Stomach Ache",
+    "symptoms": ["abdominal pain", "cramps", "bloating", "indigestion"],
+    "description": "Pain in the abdomen often caused by indigestion, gas, or food poisoning.",
+    "solution": "Eat light food, avoid spicy items, and drink warm water."
+  },
+  {
+    "name": "Diarrhea",
+    "symptoms": ["loose stools", "frequent bowel movement", "stomach pain"],
+    "description": "A condition of frequent loose or watery stools, often due to infection.",
+    "solution": "Drink ORS (Oral Rehydration Solution), avoid oily food, and stay hydrated."
+  }
+]
