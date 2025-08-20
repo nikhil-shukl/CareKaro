@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Headline from "../components/Headline";
 
 
 const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white pt-[140px]">
   <Navbar />
+  <Headline/>
 
   <div className="p-6 sm:p-10 text-center">
     <h1 className="text-2xl sm:text-4xl font-bold text-gray-800">

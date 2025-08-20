@@ -1,57 +1,83 @@
 import React, { useState } from "react";
-import Fuse from "fuse.js";
 import data from "../data.json";
 
 const Scanning = () => {
   const [query, setQuery] = useState("");
-  const [result, setResult] = useState(null);
-
-  // Setup Fuse.js
-  const fuse = new Fuse(data, {
-    keys: ["symptoms", "name"], // Search in both disease name + symptoms
-    threshold: 0.3              // Lower = stricter match
-  });
+  const [messages, setMessages] = useState([]);
 
   const handleSearch = () => {
-    const searchResult = fuse.search(query);
-    if (searchResult.length > 0) {
-      setResult(searchResult[0].item);
-    } else {
-      setResult(null);
+    const text = query.toLowerCase();
+    let found = null;
+
+    for (const item of data) {
+      for (const key of item.keywords) {
+        if (text.includes(key.toLowerCase())) {
+          found = item;
+          break;
+        }
+      }
+      if (found) break;
     }
+
+    // Add user message
+    const newMessages = [...messages, { sender: "user", text: query }];
+
+    if (found) {
+      newMessages.push({
+        sender: "bot",
+        text: `🤖 I understand you're experiencing symptoms related to **${found.keywords[0]}**.\n\n📝 **Description:** ${found.description}\n\n💡 **Remedy (Do / Don’t):** ${found.remedy}\n\n⚠️ *Disclaimer: This is general information and not a substitute for professional medical advice.*`
+      });
+    } else {
+      newMessages.push({
+        sender: "bot",
+        text: "❌ Sorry, I couldn't identify your symptoms. Please rephrase or try another."
+      });
+    }
+
+    setMessages(newMessages);
+    setQuery(""); // Clear input
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-gray-50">
+    <div className="p-6 min-h-screen flex flex-col items-center bg-gray-50">
       <h1 className="text-3xl font-bold mb-4">CareScan 🩺</h1>
-      <p className="mb-6 text-gray-600">Describe your symptoms to get possible causes and remedies</p>
 
-      <input
-        type="text"
-        placeholder="Enter your symptoms..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full max-w-lg p-3 border rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
+      {/* Chat Window */}
+      <div className="w-full max-w-lg flex-1 overflow-y-auto bg-white rounded-lg shadow p-4 mb-4">
+        {messages.map((msg, i) => (
+          <div
+            key={i}
+            className={`my-2 p-3 rounded-lg max-w-[80%] ${
+              msg.sender === "user"
+                ? "bg-blue-500 text-white self-end ml-auto"
+                : "bg-gray-200 text-gray-800 self-start"
+            }`}
+          >
+            {msg.text.split("\n").map((line, idx) => (
+              <p key={idx} className="mb-1">
+                {line}
+              </p>
+            ))}
+          </div>
+        ))}
+      </div>
 
-      <button
-        onClick={handleSearch}
-        className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-2xl shadow hover:bg-blue-600"
-      >
-        Scan Symptoms
-      </button>
-
-      {result && (
-        <div className="mt-8 w-full max-w-lg p-6 bg-white shadow-lg rounded-2xl text-left">
-          <h2 className="text-2xl font-semibold text-blue-600">{result.name}</h2>
-          <p className="mt-2 text-gray-700">{result.description}</p>
-          <p className="mt-2 text-green-600 font-medium">💡 Solution: {result.solution}</p>
-        </div>
-      )}
-
-      {!result && query && (
-        <p className="mt-6 text-red-500">❌ No close match found. Try describing differently.</p>
-      )}
+      {/* Input Area */}
+      <div className="w-full max-w-lg flex">
+        <textarea
+          className="flex-1 p-3 border rounded-lg"
+          rows={2}
+          placeholder="Describe your symptoms..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button
+          onClick={handleSearch}
+          className="ml-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        >
+          Send
+        </button>
+      </div>
     </div>
   );
 };

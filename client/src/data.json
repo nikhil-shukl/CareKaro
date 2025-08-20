@@ -1,32 +1,47 @@
 [
   {
-    "name": "Common Cold",
-    "symptoms": ["cough", "sneezing", "runny nose", "sore throat"],
-    "description": "A viral infection affecting the nose and throat. Usually mild but can cause discomfort.",
-    "solution": "Rest, drink warm fluids, and take over-the-counter medicines if needed."
+    "keywords": ["headache", "head pain", "migraine"],
+    "description": "Headache is a common condition often triggered by stress, eyestrain, dehydration, or changes in sleep. Symptoms may include throbbing or dull pain in the head, sensitivity to light or sound, or tension across the forehead.",
+    "remedy": "• Rest in a quiet, dim room\n• Stay hydrated\n• Use a cold compress or massage your temples\n• Over-the-counter analgesics like paracetamol or ibuprofen may help (if safe for you)\n• Avoid prolonged screen time (Do: Take breaks; Don't: Skip meals or rest)"
   },
   {
-    "name": "Fever",
-    "symptoms": ["high temperature", "sweating", "shivering", "weakness"],
-    "description": "Fever is usually a sign that your body is fighting an infection.",
-    "solution": "Stay hydrated, take paracetamol if necessary, and rest well."
+    "keywords": ["fever", "high temperature", "temperature"],
+    "description": "Fever is an elevation in body temperature, usually caused by infection. Accompanying symptoms may include chills, sweating, muscle aches, and fatigue.",
+    "remedy": "• Drink plenty of water or fluids with electrolytes\n• Rest well and sleep\n• Use a lukewarm sponge bath or lukewarm fluids for comfort\n• Take paracetamol to reduce fever, avoiding aspirin in children (Do: Monitor temperature; Don't: Overdress or keep the room too warm)"
   },
   {
-    "name": "Headache",
-    "symptoms": ["head pain", "migraine", "sensitivity to light", "stress"],
-    "description": "A common condition that can be caused by stress, dehydration, or migraine.",
-    "solution": "Drink water, rest in a dark room, and take mild pain relievers if needed."
+    "keywords": ["common cold", "cold", "runny nose", "sore throat", "cough", "sneezing"],
+    "description": "The common cold is a viral infection of the nose or throat. Symptoms often include sneezing, runny or blocked nose, sore throat, mild cough, and sometimes a mild headache or fatigue.",
+    "remedy": "• Rest and stay hydrated\n• Use saline nasal drops or steam inhalation to relieve congestion\n• Ginger-lemon-honey tea or honey with warm water soothes throat\n• Avoid cold air (Do: Wash hands frequently; Don't: Use antibiotics—they don’t work on viruses)"
   },
   {
-    "name": "Stomach Ache",
-    "symptoms": ["abdominal pain", "cramps", "bloating", "indigestion"],
-    "description": "Pain in the abdomen often caused by indigestion, gas, or food poisoning.",
-    "solution": "Eat light food, avoid spicy items, and drink warm water."
+    "keywords": ["indigestion", "stomach pain", "gas", "acid reflux", "heartburn"],
+    "description": "Indigestion (dyspepsia) is discomfort or burning in the upper abdomen, often occurring after meals. It may feel bloated or gassy.",
+    "remedy": "• Eat smaller, bland meals slowly\n• Avoid spicy, fried, or acidic foods\n• Drink warm water, fennel tea, or use fennel seeds after meals\n• Avoid lying down immediately after eating (Do: Eat upright; Don't: Skip meals or overeat)"
   },
   {
-    "name": "Diarrhea",
-    "symptoms": ["loose stools", "frequent bowel movement", "stomach pain"],
-    "description": "A condition of frequent loose or watery stools, often due to infection.",
-    "solution": "Drink ORS (Oral Rehydration Solution), avoid oily food, and stay hydrated."
+    "keywords": ["tiredness", "fatigue", "weakness", "exhaustion"],
+    "description": "Fatigue is a feeling of physical or mental exhaustion that can result from overwork, inadequate sleep, stress, or underlying illness.",
+    "remedy": "• Ensure 7–9 hours of quality sleep\n• Maintain a balanced diet with iron-rich foods\n• Manage stress through light exercise or relaxation\n• Limit caffeine late in the day (Do: Stay active; Don't: Overexert yourself)"
+  },
+  {
+    "keywords": ["diarrhea", "loose stools", "runny stools", "stomach upset"],
+    "description": "Diarrhea is passing loose or watery stools multiple times per day. Common causes include viral or food-borne infections, stress, or dietary issues.",
+    "remedy": "• Stay hydrated – drink water, oral rehydration solution (ORS)\n• Eat bland foods like bananas, rice, toast (BRAT diet)\n• Avoid dairy, greasy or spicy items temporarily\n• See a doctor if it persists more than 48 hours (Do: Rehydrate; Don't: Eat junk food)"
+  },
+  {
+    "keywords": ["allergy", "allergies", "hay fever", "sneezing", "itchy eyes", "runny nose"],
+    "description": "Allergies are immune reactions to harmless substances (allergens) like pollen, dust, or pet dander. Symptoms include sneezing, watery eyes, nasal congestion, and itching.",
+    "remedy": "• Avoid known triggers, such as pollen or dust\n• Use saline nasal rinse or antihistamines if needed\n• Keep windows closed during high pollen days (Do: Clean rooms; Don't: Rub your eyes)"
+  },
+  {
+    "keywords": ["fatigue", "tiredness", "exhaustion", "weariness"],
+    "description": "Fatigue refers to a deep sense of tiredness and lack of energy that does not improve with rest.",
+    "remedy": "• Prioritize sleep and manage workload\n• Stay hydrated and maintain a balanced diet\n• Implement short breaks and light activity (Do: Nap if needed; Don't: Push beyond your limits)"
+  },
+  {
+    "keywords": ["nausea", "vomiting", "feel like vomiting"],
+    "description": "Nausea is a queasy feeling often before vomiting, usually caused by infections, food poisoning, motion, or early pregnancy.",
+    "remedy": "• Sip clear fluids slowly (water, ginger tea)\n• Eat mild, plain foods (crackers, toast)\n• Avoid greasy or strong-smelling foods (Do: Rest upright; Don't: Force eat)"
   }
 ]
