@@ -1,47 +1,86 @@
 [
   {
-    "keywords": ["headache", "head pain", "migraine"],
-    "description": "Headache is a common condition often triggered by stress, eyestrain, dehydration, or changes in sleep. Symptoms may include throbbing or dull pain in the head, sensitivity to light or sound, or tension across the forehead.",
-    "remedy": "• Rest in a quiet, dim room\n• Stay hydrated\n• Use a cold compress or massage your temples\n• Over-the-counter analgesics like paracetamol or ibuprofen may help (if safe for you)\n• Avoid prolonged screen time (Do: Take breaks; Don't: Skip meals or rest)"
+    "keywords": ["headache", "migraine", "head pain"],
+    "description": "Pain or pressure in the head; often from stress, dehydration, or eyestrain.",
+    "worstCase": "Severe migraine or cluster headache may require medical attention if persistent or accompanied by vision changes.",
+    "remedy": "• Rest in a quiet, dark room\n• Hydrate\n• Cold compress or gentle temple massage\n• OTC pain relief if safe\n(Do: Take breaks; Don't: Skip meals or overexert)"
   },
   {
-    "keywords": ["fever", "high temperature", "temperature"],
-    "description": "Fever is an elevation in body temperature, usually caused by infection. Accompanying symptoms may include chills, sweating, muscle aches, and fatigue.",
-    "remedy": "• Drink plenty of water or fluids with electrolytes\n• Rest well and sleep\n• Use a lukewarm sponge bath or lukewarm fluids for comfort\n• Take paracetamol to reduce fever, avoiding aspirin in children (Do: Monitor temperature; Don't: Overdress or keep the room too warm)"
+    "keywords": ["fever", "high temperature"],
+    "description": "Elevated body temperature, usually due to infection.",
+    "worstCase": "High fever (>104°F/40°C) or fever with rash, confusion, or breathing difficulty requires urgent medical care.",
+    "remedy": "• Drink water or electrolyte fluids\n• Rest and sleep\n• Lukewarm sponge bath\n• Paracetamol if safe\n(Do: Monitor temperature; Don't: Overdress)"
   },
   {
-    "keywords": ["common cold", "cold", "runny nose", "sore throat", "cough", "sneezing"],
-    "description": "The common cold is a viral infection of the nose or throat. Symptoms often include sneezing, runny or blocked nose, sore throat, mild cough, and sometimes a mild headache or fatigue.",
-    "remedy": "• Rest and stay hydrated\n• Use saline nasal drops or steam inhalation to relieve congestion\n• Ginger-lemon-honey tea or honey with warm water soothes throat\n• Avoid cold air (Do: Wash hands frequently; Don't: Use antibiotics—they don’t work on viruses)"
+    "keywords": ["common cold", "cough", "sneezing", "runny nose"],
+    "description": "Mild viral infection of nose/throat; symptoms include cough, congestion, sneezing.",
+    "worstCase": "If symptoms worsen with high fever, chest pain, or shortness of breath, see a doctor.",
+    "remedy": "• Rest and hydrate\n• Saline nasal drops or steam\n• Honey or warm teas for throat\n(Do: Wash hands; Don't: Use antibiotics unnecessarily)"
   },
   {
-    "keywords": ["indigestion", "stomach pain", "gas", "acid reflux", "heartburn"],
-    "description": "Indigestion (dyspepsia) is discomfort or burning in the upper abdomen, often occurring after meals. It may feel bloated or gassy.",
-    "remedy": "• Eat smaller, bland meals slowly\n• Avoid spicy, fried, or acidic foods\n• Drink warm water, fennel tea, or use fennel seeds after meals\n• Avoid lying down immediately after eating (Do: Eat upright; Don't: Skip meals or overeat)"
+    "keywords": ["indigestion", "heartburn", "stomach pain", "gas"],
+    "description": "Upper abdominal discomfort or burning, often after meals.",
+    "worstCase": "Persistent pain, vomiting blood, or black stools may indicate ulcers or GI issues—seek medical care.",
+    "remedy": "• Eat small, bland meals\n• Avoid spicy/fried foods\n• Drink warm water or fennel tea\n(Do: Eat upright; Don't: Overeat)"
   },
   {
-    "keywords": ["tiredness", "fatigue", "weakness", "exhaustion"],
-    "description": "Fatigue is a feeling of physical or mental exhaustion that can result from overwork, inadequate sleep, stress, or underlying illness.",
-    "remedy": "• Ensure 7–9 hours of quality sleep\n• Maintain a balanced diet with iron-rich foods\n• Manage stress through light exercise or relaxation\n• Limit caffeine late in the day (Do: Stay active; Don't: Overexert yourself)"
+    "keywords": ["fatigue", "tiredness", "exhaustion"],
+    "description": "Persistent tiredness not relieved by rest.",
+    "worstCase": "Extreme fatigue with dizziness, shortness of breath, or palpitations may indicate anemia, thyroid, or heart issues.",
+    "remedy": "• 7–9 hours sleep\n• Balanced diet, iron-rich foods\n• Light exercise\n(Do: Rest when needed; Don't: Overexert)"
   },
   {
-    "keywords": ["diarrhea", "loose stools", "runny stools", "stomach upset"],
-    "description": "Diarrhea is passing loose or watery stools multiple times per day. Common causes include viral or food-borne infections, stress, or dietary issues.",
-    "remedy": "• Stay hydrated – drink water, oral rehydration solution (ORS)\n• Eat bland foods like bananas, rice, toast (BRAT diet)\n• Avoid dairy, greasy or spicy items temporarily\n• See a doctor if it persists more than 48 hours (Do: Rehydrate; Don't: Eat junk food)"
+    "keywords": ["diarrhea", "loose stools", "stomach upset"],
+    "description": "Frequent watery stools caused by infection or diet.",
+    "worstCase": "Severe dehydration or diarrhea lasting >48 hrs requires medical attention.",
+    "remedy": "• Hydrate (water/ORS)\n• Eat bland foods (BRAT diet)\n• Avoid dairy or spicy foods\n(Do: Rehydrate; Don't: Eat junk food)"
   },
   {
-    "keywords": ["allergy", "allergies", "hay fever", "sneezing", "itchy eyes", "runny nose"],
-    "description": "Allergies are immune reactions to harmless substances (allergens) like pollen, dust, or pet dander. Symptoms include sneezing, watery eyes, nasal congestion, and itching.",
-    "remedy": "• Avoid known triggers, such as pollen or dust\n• Use saline nasal rinse or antihistamines if needed\n• Keep windows closed during high pollen days (Do: Clean rooms; Don't: Rub your eyes)"
+    "keywords": ["allergy", "hay fever", "itchy eyes", "runny nose"],
+    "description": "Immune reaction to allergens like pollen, dust, or pets.",
+    "worstCase": "Severe allergy can trigger breathing difficulties (anaphylaxis) — call emergency services.",
+    "remedy": "• Avoid triggers\n• Saline rinse or antihistamines\n• Keep windows closed\n(Do: Clean rooms; Don't: Rub eyes)"
   },
   {
-    "keywords": ["fatigue", "tiredness", "exhaustion", "weariness"],
-    "description": "Fatigue refers to a deep sense of tiredness and lack of energy that does not improve with rest.",
-    "remedy": "• Prioritize sleep and manage workload\n• Stay hydrated and maintain a balanced diet\n• Implement short breaks and light activity (Do: Nap if needed; Don't: Push beyond your limits)"
+    "keywords": ["nausea", "vomiting", "queasy"],
+    "description": "Queasy feeling in stomach; may precede vomiting.",
+    "worstCase": "Persistent vomiting causing dehydration or blood in vomit needs urgent care.",
+    "remedy": "• Sip clear fluids\n• Eat mild foods\n• Avoid greasy foods\n(Do: Rest upright; Don't: Force eat)"
   },
   {
-    "keywords": ["nausea", "vomiting", "feel like vomiting"],
-    "description": "Nausea is a queasy feeling often before vomiting, usually caused by infections, food poisoning, motion, or early pregnancy.",
-    "remedy": "• Sip clear fluids slowly (water, ginger tea)\n• Eat mild, plain foods (crackers, toast)\n• Avoid greasy or strong-smelling foods (Do: Rest upright; Don't: Force eat)"
+    "keywords": ["acne", "pimples", "skin breakouts"],
+    "description": "Inflammation of hair follicles; common in teens and adults.",
+    "worstCase": "Severe cystic acne may require dermatologist treatment to prevent scarring.",
+    "remedy": "• Gentle cleansing, avoid harsh scrubbing\n• Topical treatments (benzoyl peroxide/salicylic acid)\n(Do: Keep skin clean; Don't: Pick pimples)"
+  },
+  {
+    "keywords": ["back pain", "lower back", "spinal pain"],
+    "description": "Pain in lower or upper back, often from posture or strain.",
+    "worstCase": "Severe pain with numbness, weakness, or bladder issues may indicate spinal nerve problem.",
+    "remedy": "• Gentle stretching, posture correction\n• Heat/ice therapy\n• OTC pain relief\n(Do: Stay active; Don't: Lift heavy suddenly)"
+  },
+  {
+    "keywords": ["acid reflux", "GERD", "heartburn"],
+    "description": "Acid from stomach rising into esophagus causing burning.",
+    "worstCase": "Persistent reflux or difficulty swallowing may indicate esophageal damage — see doctor.",
+    "remedy": "• Avoid late-night meals\n• Eat small meals, avoid spicy/fatty food\n• Elevate head while sleeping\n(Do: Track triggers; Don't: Lie immediately after eating)"
+  },
+  {
+    "keywords": ["anxiety", "stress", "nervousness"],
+    "description": "Feelings of worry or nervousness affecting daily life.",
+    "worstCase": "Severe anxiety attacks affecting breathing or daily function may require professional help.",
+    "remedy": "• Deep breathing, meditation\n• Light exercise, balanced sleep\n• Talk therapy if needed\n(Do: Relaxation; Don't: Overthink excessively)"
+  },
+  {
+    "keywords": ["hair loss", "alopecia", "thinning hair"],
+    "description": "Excessive hair shedding, often due to genetics, stress, or illness.",
+    "worstCase": "Rapid or patchy hair loss may need dermatologist evaluation.",
+    "remedy": "• Maintain nutrition and protein intake\n• Avoid harsh chemicals\n(Do: Gentle care; Don't: Pull or scratch scalp)"
+  },
+  {
+    "keywords": ["insomnia", "sleep trouble", "can't sleep"],
+    "description": "Difficulty falling or staying asleep.",
+    "worstCase": "Chronic insomnia may affect mood, memory, and health; seek professional help if persistent.",
+    "remedy": "• Maintain sleep schedule\n• Avoid caffeine or screens before bed\n• Relaxation techniques\n(Do: Sleep hygiene; Don't: Stress about sleep)"
   }
 ]

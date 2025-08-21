@@ -1,0 +1,100 @@
+{
+  "MediNeeds": [
+    {
+      "Title": "Blood Requirement",
+      "Description": "Urgent need for O+ blood for a patient undergoing surgery.",
+      "Type": "Emergency",
+      "FullName": "Dr. Anil Sharma",
+      "Location": "Apollo Hospital, Mumbai",
+      "Contact": "+91-9876543210"
+    },
+    {
+      "Title": "ICU Bed Needed",
+      "Description": "Immediate ICU bed requirement for critical COVID patient.",
+      "Type": "Emergency",
+      "FullName": "Dr. Priya Nair",
+      "Location": "Lilavati Hospital, Mumbai",
+      "Contact": "+91-9922334455"
+    },
+    {
+      "Title": "Oxygen Cylinder",
+      "Description": "Patient admitted in emergency ward needs continuous oxygen supply.",
+      "Type": "Emergency",
+      "FullName": "Mr. Rajesh Kumar",
+      "Location": "KEM Hospital, Pune",
+      "Contact": "emergency@kemhosp.org"
+    },
+    {
+      "Title": "Nurse Recruitment",
+      "Description": "Hospital hiring 10 trained nurses for ICU and emergency ward.",
+      "Type": "Hiring",
+      "FullName": "HR Department",
+      "Location": "Jaslok Hospital, Mumbai",
+      "Contact": "hr@jaslokhosp.com"
+    },
+    {
+      "Title": "Compounder Required",
+      "Description": "Urgent requirement of 5 compounders for OPD and pharmacy.",
+      "Type": "Hiring",
+      "FullName": "HR Manager",
+      "Location": "Ruby Hall Clinic, Pune",
+      "Contact": "+91-9988776655"
+    },
+    {
+      "Title": "Technician Vacancy",
+      "Description": "X-ray and MRI technicians required for 24x7 diagnostic services.",
+      "Type": "Hiring",
+      "FullName": "Dr. Meera Patel",
+      "Location": "Fortis Hospital, Thane",
+      "Contact": "careers@fortisthane.com"
+    },
+    {
+      "Title": "Ventilator Demand",
+      "Description": "Hospital needs 15 ventilators for expanding ICU capacity.",
+      "Type": "Demand",
+      "FullName": "Procurement Office",
+      "Location": "Nanavati Hospital, Mumbai",
+      "Contact": "purchase@nanavati.org"
+    },
+    {
+      "Title": "Hospital Beds",
+      "Description": "Requirement of 50 adjustable hospital beds for new ward setup.",
+      "Type": "Demand",
+      "FullName": "Admin Department",
+      "Location": "Sahyadri Hospital, Pune",
+      "Contact": "+91-8899776655"
+    },
+    {
+      "Title": "Dialysis Machines",
+      "Description": "Nephrology unit requires 6 dialysis machines on urgent basis.",
+      "Type": "Demand",
+      "FullName": "Dr. Rakesh Menon",
+      "Location": "Hiranandani Hospital, Navi Mumbai",
+      "Contact": "nephrology@hiranandani.in"
+    },
+    {
+      "Title": "Surgeon Hiring",
+      "Description": "Vacancy for a senior cardiovascular surgeon with 10+ years experience.",
+      "Type": "Hiring",
+      "FullName": "Medical Superintendent",
+      "Location": "Bombay Hospital, Mumbai",
+      "Contact": "jobs@bombayhosp.org"
+    },
+    {
+      "Title": "Platelets Needed",
+      "Description": "Urgent requirement of platelets for a dengue patient.",
+      "Type": "Emergency",
+      "FullName": "Dr. Sneha Joshi",
+      "Location": "Sion Hospital, Mumbai",
+      "Contact": "+91-7766554433"
+    },
+    {
+      "Title": "Ambulance Support",
+      "Description": "Emergency ambulance required with ventilator support.",
+      "Type": "Emergency",
+      "FullName": "Mr. Ajay Verma",
+      "Location": "Civil Hospital, Nashik",
+      "Contact": "ambulance@civilnashik.gov"
+    }
+  ]
+}
