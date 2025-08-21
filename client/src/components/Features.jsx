@@ -3,11 +3,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { featuresData } from "../assets/featuresData";
 
-// Import icons
-import { Camera, MapPin, Headphones, BookOpen, Megaphone } from "lucide-react";
+// Import icons from lucide-react
+import { 
+  Stethoscope, 
+  FileText, 
+  BookOpen, 
+  Megaphone ,
+  MapPin
+} from "lucide-react";
 
 // Map icon names to actual Lucide icons
-const iconMap = { Camera, MapPin, Headphones, BookOpen, Megaphone };
+const iconMap = { Stethoscope, FileText, BookOpen, Megaphone,MapPin };
 
 const Features = () => {
   const navigate = useNavigate();

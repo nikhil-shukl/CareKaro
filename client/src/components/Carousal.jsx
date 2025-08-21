@@ -27,7 +27,6 @@ const Carousal = () => {
     <>
       {images.length > 0 && (
         <div className="relative w-full max-w-6xl mx-auto mt-5 overflow-hidden rounded-xl shadow-2xl">
-          {/* Responsive height: small screens smaller, large screens taller */}
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{
@@ -38,13 +37,12 @@ const Carousal = () => {
             {images.map((imgSrc, index) => (
               <div
                 key={index}
-                className="w-full flex-shrink-0 flex items-center justify-center p-2"
-                style={{ height: "100%" }}
+                className="w-full flex-shrink-0 flex items-center justify-center"
               >
                 <img
                   src={imgSrc}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg"
+                  className="w-full h-40 sm:h-52 md:h-60 lg:h-64 object-cover rounded-lg"
                 />
               </div>
             ))}
@@ -69,7 +67,7 @@ const Carousal = () => {
 
       {/* Loading fallback */}
       {images.length === 0 && (
-        <div className="w-full max-w-6xl h-48 sm:h-64 md:h-80 lg:h-96 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 mx-auto mt-8">
+        <div className="w-full max-w-6xl h-40 sm:h-52 md:h-60 lg:h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 mx-auto mt-8">
           Loading images...
         </div>
       )}

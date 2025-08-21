@@ -39,8 +39,8 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <a href="#services" className="hover:text-black transition">Features</a>
-          <a href="#testimonials" className="hover:text-black transition">Highlights</a>
+          <a href="#services" className="hover:text-black transition">All Features</a>
+          <a href="#testimonials" className="hover:text-black transition">Testimonials</a>
         </div>
 
         <div className="flex items-center space-x-4">
