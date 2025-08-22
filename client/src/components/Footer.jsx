@@ -20,7 +20,8 @@ const Footer = () => {
             <Phone className="text-orange-500 w-8 h-8" />
             <div className="ml-3">
               <h4 className="text-white text-lg font-semibold">Call us</h4>
-              <span className="text-sm">+91-8652440318</span>
+              <span className="text-sm">
+                <a href="tel:91-8652440318" className="text-blue-300 hover:underline">+91-8652440318</a></span>
             </div>
           </div>
           {/* Mail Us */}
@@ -61,18 +62,41 @@ const Footer = () => {
         </div>
 
         {/* Emergency Helplines */}
-        <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-white text-lg font-semibold mb-4">Emergency Helplines</h3>
-          <ul className="text-sm space-y-2">
-            <li>National Emergency: 112</li>
-            <li>Ambulance: 108 or 102</li>
-            <li>Cancer Helpline: 1800-22-1951</li>
-            <li>Red Cross Blood Bank: 1910</li>
-            <li>Tele-Manas (Mental Health): 14416</li>
-            <li>Poison Control: 1800-425-1213</li>
-            <li>Ayushman Bharat: 14555</li>
-          </ul>
-        </div>
+       <div className="flex flex-col items-center md:items-start px-15">
+  <h3 className="text-white text-lg font-semibold mb-4">Emergency Helplines</h3>
+  <ul className="text-sm space-y-2">
+    <li>
+      National Emergency:{" "}
+      <a href="tel:112" className="text-blue-300 hover:underline">112</a>
+    </li>
+    <li>
+      Ambulance:{" "}
+      <a href="tel:108" className="text-blue-300 hover:underline">108</a> or{" "}
+      <a href="tel:102" className="text-blue-300 hover:underline">102</a>
+    </li>
+    <li>
+      Cancer Helpline:{" "}
+      <a href="tel:1800221951" className="text-blue-300 hover:underline">1800-22-1951</a>
+    </li>
+    <li>
+      Red Cross Blood Bank:{" "}
+      <a href="tel:1910" className="text-blue-300 hover:underline">1910</a>
+    </li>
+    <li>
+      Tele-Manas (Mental Health):{" "}
+      <a href="tel:14416" className="text-blue-300 hover:underline">14416</a>
+    </li>
+    <li>
+      Poison Control:{" "}
+      <a href="tel:18004251213" className="text-blue-300 hover:underline">1800-425-1213</a>
+    </li>
+    <li>
+      Ayushman Bharat:{" "}
+      <a href="tel:14555" className="text-blue-300 hover:underline">14555</a>
+    </li>
+  </ul>
+</div>
+
 
         {/* Disclaimer */}
         <div className="flex flex-col items-center md:items-start">
