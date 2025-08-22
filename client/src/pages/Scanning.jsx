@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import data from "../data.json";
-import vividBg from "/vivid.jpg"; // public folder
+import vividBg from "/vivid.jpg";
 import { UserButton, useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import HospitalLoader from "../components/HospitalLoader";
 
 const Scanning = () => {
-  const { user } = useUser(); // Clerk user info
+  const { user } = useUser();
+  const navigate = useNavigate();
+
   const [query, setQuery] = useState("");
   const [messages, setMessages] = useState([
     {
@@ -14,11 +19,21 @@ const Scanning = () => {
       }! I am Doctor Bot. I can help you understand common health issues. Please describe your symptoms.`,
     },
   ]);
-
   const [botTyping, setBotTyping] = useState(false);
   const chatRef = useRef();
 
-  // Scroll inside chat area only
+  // **NEW: Loader state for initial route visit**
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Show loader for 1.5s (or adjust duration as needed)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     if (chatRef.current) {
       chatRef.current.scrollTop = chatRef.current.scrollHeight;
@@ -42,34 +57,37 @@ const Scanning = () => {
       }
     }
 
-    // Simulate AI typing
     setBotTyping(true);
     setTimeout(() => {
       const botMsg = found
-        ? `I understand your symptoms might relate to "${found.keywords[0]}".
-
-Description: ${found.description}
-
-Remedy:
-${found.remedy}
-
-Worst Case: ${found.worstCase}
-`
+        ? `I understand your symptoms might relate to "${found.keywords[0]}".\n\nDescription: ${found.description}\n\nRemedy:\n${found.remedy}\n\nWorst Case: ${found.worstCase}`
         : `Sorry, I couldn't identify your symptoms. Please rephrase or provide more details.`;
 
       setMessages((prev) => [...prev, { sender: "bot", text: botMsg }]);
       setBotTyping(false);
-    }, 1500); // typing delay
+    }, 1500);
   };
+
+  // **Return loader if still loading on route visit**
+  if (loading) return <HospitalLoader />;
 
   return (
     <div
       className="flex flex-col items-center min-h-screen p-4 bg-cover bg-center"
       style={{ backgroundImage: `url(${vividBg})` }}
     >
+      {/* Back Button */}
+      <button
+        onClick={() => navigate("/")}
+        className="absolute top-4 left-4 flex items-center gap-1 px-3 py-2 cursor-pointer hover:bg-opacity-100 transition"
+      >
+        <ArrowLeft size={18} className="text-gray-700" />
+        <span className="text-gray-800 font-medium">Back</span>
+      </button>
+
       {/* Top Quote */}
-      <div className="text-center mb-2 text-black text-lg font-medium max-w-full">
-        Our bot upgrading daily to give up our life to learn how to save yours
+      <div className="text-center mb-2 text-black text-lg font-medium max-w-full mt-10">
+        Our bot is upgrading daily to give up his life to learn how to save yours
         <p className="text-red-400 text-sm mt-2 max-w-2xl text-center">
           ⚠️ This information is for general guidance only and is not a
           substitute for professional medical advice.
@@ -83,11 +101,7 @@ Worst Case: ${found.worstCase}
 
       {/* Chat Window */}
       <div className="w-full max-w-4xl h-[75vh] flex-1 bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-        {/* Messages Area */}
-        <div
-          ref={chatRef}
-          className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 bg-white"
-        >
+        <div ref={chatRef} className="flex-1 overflow-y-auto p-4 flex flex-col gap-3 bg-white">
           {messages.map((msg, i) => (
             <div
               key={i}
@@ -95,22 +109,13 @@ Worst Case: ${found.worstCase}
                 msg.sender === "user" ? "flex-row-reverse" : "flex-row"
               }`}
             >
-              {/* Avatar */}
               <div>
                 {msg.sender === "user" ? (
-                  <UserButton
-                    appearance={{ elements: { avatarBox: "w-12 h-12" } }}
-                  />
+                  <UserButton appearance={{ elements: { avatarBox: "w-12 h-12" } }} />
                 ) : (
-                  <img
-                    src="/bot_avatar.png"
-                    alt="Bot"
-                    className="w-12 h-12 rounded-full"
-                  />
+                  <img src="/bot_avatar.png" alt="Bot" className="w-12 h-12 rounded-full" />
                 )}
               </div>
-
-              {/* Message Bubble */}
               <div
                 className={`p-4 max-w-[75%] rounded-lg break-words whitespace-pre-wrap ${
                   msg.sender === "user"
@@ -119,22 +124,15 @@ Worst Case: ${found.worstCase}
                 }`}
               >
                 {msg.text.split("\n").map((line, idx) => (
-                  <p key={idx} className="mb-1">
-                    {line}
-                  </p>
+                  <p key={idx} className="mb-1">{line}</p>
                 ))}
               </div>
             </div>
           ))}
 
-          {/* Bot Typing */}
           {botTyping && (
             <div className="flex items-start gap-2 flex-row">
-              <img
-                src="/bot_avatar.png"
-                alt="Bot"
-                className="w-12 h-12 rounded-full"
-              />
+              <img src="/bot_avatar.png" alt="Bot" className="w-12 h-12 rounded-full" />
               <div className="bg-gray-200 p-3 rounded-lg flex gap-1 w-20 justify-center">
                 <span className="dot animate-ping"></span>
                 <span className="dot animate-ping delay-200"></span>
@@ -163,7 +161,7 @@ Worst Case: ${found.worstCase}
         </div>
       </div>
 
-      {/* Dot Animation */}
+      {/* Typing dots CSS */}
       <style jsx>{`
         .dot {
           width: 6px;
@@ -182,8 +180,7 @@ Worst Case: ${found.worstCase}
           animation-delay: 0.4s;
         }
         @keyframes ping {
-          0%,
-          100% {
+          0%, 100% {
             transform: scale(0.6);
             opacity: 0.3;
           }

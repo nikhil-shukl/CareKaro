@@ -1,3 +1,4 @@
+
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI("AIzaSyBU9QEqvUIHsoL2qrbpZ1f0G5wO7R6kh6Y");
@@ -9,8 +10,9 @@ export const scanReport = async (req, res) => {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `
-      Analyze this medical report image and return JSON with:
-      patientName, age, gender, diseaseOrCondition, symptoms, reportDetails
+      Analyze this medical report image and summarize it in a clear paragraph.
+      Mention the patient's name, age, gender, condition, and main details in human-readable form.
+      Do not return JSON, just a natural descriptive text.
     `;
 
     const result = await model.generateContent([
@@ -19,10 +21,9 @@ export const scanReport = async (req, res) => {
     ]);
 
     const text = (await result.response).text();
-    const cleanedText = text.replace(/```(?:json)?\n?/g, "").trim();
-    const data = JSON.parse(cleanedText);
+    const cleanedText = text.replace(/```/g, "").trim();
 
-    res.json(data);
+    res.json({ description: cleanedText });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Failed to scan report" });

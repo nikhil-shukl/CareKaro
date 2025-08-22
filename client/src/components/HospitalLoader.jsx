@@ -21,7 +21,7 @@ const HospitalLoader = () => {
 
       {/* Loading text */}
       <p className="text-gray-700 text-lg animate-pulse">
-        Preparing your care details...
+        Caring begins...
       </p>
 
       {/* Keyframes for horizontal motion and heartbeat */}
