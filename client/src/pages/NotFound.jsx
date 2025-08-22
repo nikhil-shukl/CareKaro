@@ -1,32 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
-const NotFound = () => {
+export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center">
-      <motion.img
-        src="https://i.pinimg.com/originals/51/10/12/511012fa1cfe9efa408b0c26bf30795d.gif"
-        alt="Hospital Ambulance Animation"
-        className="w-64 h-64 mb-6 drop-shadow-lg"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, type: "spring" }}
-      />
-      <h1 className="text-7xl font-extrabold text-red-500 drop-shadow-sm">404</h1>
-      <p className="text-2xl text-gray-700 mt-4 mb-8 max-w-lg">
-        Oops! Looks like CareKaro’s ambulance is on its way but the page you're looking for hasn’t arrived yet.
-      </p>
-      <Link
-        to="/"
-        className="px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all"
-      >
-        🏥 Back to Home
-      </Link>
-    </div>
+    <section className="py-25 bg-white font-serif">
+      <div className="max-w-5xl mx-auto text-center px-4">
+        
+        {/* 404 text at the top */}
+        <h1 className="text-6xl sm:text-8xl font-bold mb-1">404</h1>
+        
+        {/* Background image in the center */}
+        <div
+          className="h-[300px] sm:h-[300px] bg-center bg-no-repeat bg-contain mx-auto"
+          style={{
+            backgroundImage:
+              "url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif')",
+          }}
+        ></div>
+        
+        {/* Content below */}
+        <div className="mt-1">
+          <h3 className="text-xl sm:text-2xl font-bold">Look like you're lost</h3>
+          <p className="mt-2 text-gray-700 text-sm sm:text-base">
+            The page you are looking for is not available!
+          </p>
+          <Link
+            to="/"
+            className="inline-block mt-2 text-white px-5 py-2 bg-blue-600 rounded hover:bg-blue-400 transition"
+          >
+            Go to Home
+          </Link>
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default NotFound;
-
-
+}

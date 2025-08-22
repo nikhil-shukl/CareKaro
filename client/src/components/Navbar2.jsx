@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar2 = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
@@ -27,6 +28,7 @@ const Navbar2 = () => {
       }`}
     >
       <nav className="px-6 py-3 flex items-center justify-between">
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img
             src="/navbar.png"
@@ -35,19 +37,36 @@ const Navbar2 = () => {
           />
         </Link>
 
+        {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
           <Link to="/about" className="hover:text-black transition">
-            About Us
+            Testimonials
           </Link>
           <Link to="/contact" className="hover:text-black transition">
             Contact Us
           </Link>
         </div>
 
+        {/* Buttons when on /advertisement */}
         {location.pathname === "/advertisement" && (
-          <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">
-            Ask Help
-          </button>
+          <div className="flex items-center gap-3">
+            {/* Go Back Button */}
+            <button
+              onClick={() => navigate("/")}
+              className="bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition 
+                px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
+            >
+              Go Back
+            </button>
+
+            {/* Ask Help Button */}
+            <button
+              className="bg-blue-600 text-white rounded-full hover:opacity-90 transition 
+                px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
+            >
+              Ask Help
+            </button>
+          </div>
         )}
       </nav>
     </header>
