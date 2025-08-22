@@ -7,12 +7,14 @@ import NotFound from "./pages/NotFound";
 import ReportScanner from "./pages/ReportScanner";
 import Advertisement from "./pages/Advertisement";
 import ScrollToTop from "./components/ScrollToTop"; // <-- import
+import HospitalMap from "./components/HospitalMapLeaflet";
 
 const App = () => {
   return (
     <div>
       <Toaster />
          <ScrollToTop /> {/* This ensures every page starts at top */}
+         
       <Routes>
         <Route path="/" element={<Landing />} />
            <Route path="/scan" element={<Scanning />} />
@@ -21,6 +23,7 @@ const App = () => {
                  <Route path="*" element={<NotFound />} />
            
       </Routes>
+       <HospitalMap />
     </div>
   );
 };

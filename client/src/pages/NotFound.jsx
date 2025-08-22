@@ -1,32 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Home, Phone } from "lucide-react";
 
 const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-6 text-center">
-      <motion.img
-        src="https://i.pinimg.com/originals/51/10/12/511012fa1cfe9efa408b0c26bf30795d.gif"
-        alt="Hospital Ambulance Animation"
-        className="w-64 h-64 mb-6 drop-shadow-lg"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, type: "spring" }}
-      />
-      <h1 className="text-7xl font-extrabold text-red-500 drop-shadow-sm">404</h1>
-      <p className="text-2xl text-gray-700 mt-4 mb-8 max-w-lg">
-        Oops! Looks like CareKaro’s ambulance is on its way but the page you're looking for hasn’t arrived yet.
-      </p>
-      <Link
-        to="/"
-        className="px-8 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all"
-      >
-        🏥 Back to Home
-      </Link>
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-white px-6 py-10">
+      
+      {/* Left Section (Text) */}
+      <div className="max-w-lg text-center md:text-left">
+        <h1 className="text-7xl font-extrabold text-gray-900">404</h1>
+        <h2 className="text-3xl font-bold text-gray-800 mt-2">
+          Page Critical Condition!
+        </h2>
+        <p className="text-gray-600 mt-4">
+          Looks like this page has gone into the ICU 🔍. <br />
+          Let’s take you back to the healthy pages.
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <Link
+            to="/"
+            className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-blue-500 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition"
+          >
+            <Home className="w-5 h-5" /> Back to Home
+          </Link>
+          <a
+            href="mailto:support@carekaro.com"
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition"
+          >
+            <Phone className="w-5 h-5" /> Contact Support
+          </a>
+        </div>
+
+        <p className="text-gray-500 text-sm mt-6">
+          Don’t worry, our doctors (developers) are trying to revive this page.
+        </p>
+      </div>
+
+      {/* Right Section (Illustration) */}
+      <div className="mt-10 md:mt-0 md:ml-12">
+        <img
+          src="/doctor-illustration.png"
+          alt="Doctor Illustration"
+          className="w-80 md:w-96"
+        />
+      </div>
     </div>
   );
 };
 
 export default NotFound;
+
 
 
