@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import ReportScanner from "./pages/ReportScanner";
 import Advertisement from "./pages/Advertisement";
 import ScrollToTop from "./components/ScrollToTop"; // <-- import
+import ProtectedRoute from "./components/ProtectedRoute"
+
 
 const App = () => {
   return (
@@ -37,7 +39,7 @@ const App = () => {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-       <HospitalMap />
+
     </div>
   );
 };
