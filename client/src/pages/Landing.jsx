@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Headline from "../components/Headline";
 import Carousal from "../components/Carousal";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
 
 
       <Features />
+      <Footer/>
     </div>
   );
 };
