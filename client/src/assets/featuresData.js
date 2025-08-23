@@ -1,5 +1,13 @@
 // assets/featuresData.js
 export const featuresData = [
+    {
+  image: "/icon.png",
+  title: "Doctor Bot",
+  description:
+    "An intelligent virtual health assistant that helps you by providing trusted medical guidance. Simply type your symptoms, and Doctor Bot offers reliable solutions to support your well-being.",
+  position: "fixed-bottom-right"
+},
+
   {
     iconName: "FileText",
     title: "Report Scan",
@@ -23,11 +31,20 @@ export const featuresData = [
   route: "/contactus",
 }
 ,
-  {
-    iconName: "BookOpen",
-    title: "Health Blogs",
-    description:
-      "Read articles and updates about health and wellness, curated by experts for your well-being.",
-    route: "/blogs",
-  },
+{
+  iconName: "PackageSearch",
+  title: "Medicine Delivery",
+  description:
+    "A smart service that searches across multiple platforms to find the availability of your prescribed medicines. It ensures you get the best options quickly and reliably, helping you save time.",
+  route: "/medicine-delivery"
+},
+{
+  iconName: "MapPin",
+  title: "Ambulance Traffic Tracking",
+  description:
+    "An intelligent navigation system that provides real-time traffic insights to guide ambulances through the fastest and least congested routes.",
+  route: "/ambulance-tracking"
+}
+
+  
 ];

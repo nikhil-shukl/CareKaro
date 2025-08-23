@@ -3,6 +3,8 @@ import mediNeedsData from "../MediNeed.json";
 import Navbar from "../components/Navbar2";
 import { Search } from "lucide-react";
 import HospitalLoader from "../components/HospitalLoader";
+import HowItWorks from "../components/HowItWorks";
+import Footer from "../components/Footer";
 
 const Advertisement = () => {
   const [loading, setLoading] = useState(true); // ✅ define loading state
@@ -32,7 +34,7 @@ const Advertisement = () => {
       
 
       {/* Page Content */}
-      <div className="pt-24 px-6 md:px-12">
+      <div className="pt-24 px-6 md:px-12 mb-3">
   {/* Quote Section - Top Banner */}
 <div className="mt-4 mb-6 text-center px-2">
   <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif italic text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -124,8 +126,12 @@ const Advertisement = () => {
 
         {/* Quote Section */}
 
-      </div>
+      </div  >
+            <HowItWorks />
+            <Footer  />
+          
     </div>
+    
   );
 };
 

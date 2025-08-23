@@ -2,25 +2,25 @@
 // Testimonials Data
 export const testimonialsData = [
   {
-    name: "Baburao Apte",
-    role: "Small Business Owner",
+    name: "Bhavik Jain",
+    role: "Health Content Youtuber",
    image: "./baburao.jpg",
 
     quote:
-      "Finora has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
+      "CareKaro service of Help-India has done my job very easy to promote my services for healthcare-issues and also it's doctor bot is good to use instant solution",
   },
   {
-    name: "Ladki hogi",
-    role: "Freelancer",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    name: "Anandi Rathi",
+    role: "Doctor",
+    image: "./women.jpg",
     quote:
-      "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
+      "The report scanner helps me to present the report in short way to my patients including the viable feature of nearby hospitals on map so that patients doesn't need to search it on Google maps.",
   },
   {
-    name: "ladka Hoga",
-    role: "Financial Advisor",
-    image: "https://randomuser.me/api/portraits/women/74.jpg",
+    name: "Tushar",
+    role: "Ambulance Service Provider",
+    image: "./tush.jpg",
     quote:
-      "I recommend Finora to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
+      "Ambulance traffic tracking system helps me a lot many times in my daily services of ambulance",
   },
 ];
