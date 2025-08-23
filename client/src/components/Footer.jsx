@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, Mail, Palette, LucideLinkedin } from "lucide-react";
+import Flag from "react-world-flags";
 
 const Footer = () => {
   return (
@@ -10,10 +11,13 @@ const Footer = () => {
           {/* Design By */}
           <div className="flex items-center justify-center sm:justify-start">
             <Palette className="text-orange-500 w-8 h-8" />
-            <div className="ml-3">
-              <h4 className="text-white text-lg font-semibold">Design by</h4>
-              <span className="text-sm">@webugbusters ❤️‍🩹</span>
-            </div>
+       <div className="ml-3">
+  <h4 className="text-white text-lg font-semibold">Design by</h4>
+  <span className="text-sm flex items-center gap-1">
+    @webugbusters <Flag code="IN" className="w-5 h-4" />
+  </span>
+</div>
+
           </div>
           {/* Call Us */}
           <div className="flex items-center justify-center">

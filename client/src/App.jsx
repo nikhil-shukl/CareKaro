@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop"; // <-- import
 import ProtectedRoute from "./components/ProtectedRoute"
 import ContactUs from "./pages/ContactUs";
 import AskHelp from "./pages/AskHelp";
+import AboutUs from "./pages/AboutUs";
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+              <Route path="/aboutus" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

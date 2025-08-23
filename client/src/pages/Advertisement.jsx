@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import mediNeedsData from "../MediNeed.json";
 import Navbar from "../components/Navbar2";
 import { Search } from "lucide-react";
@@ -7,9 +8,27 @@ import HowItWorks from "../components/HowItWorks";
 import Footer from "../components/Footer";
 
 const Advertisement = () => {
+
+  
   const [loading, setLoading] = useState(true); // ✅ define loading state
   const [filter, setFilter] = useState("all");
   const [search, setSearch] = useState("");
+
+
+    const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "how-it-works") {
+      const timer = setTimeout(() => {
+        const section = document.getElementById("how-it-works");
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 300); // wait a bit for page to load
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 900); // 1.8s loading
@@ -75,7 +94,7 @@ const Advertisement = () => {
       placeholder="Find help..."
       className="flex-grow outline-none text-gray-600 text-sm"
     />
-    <button className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 text-sm font-medium">
+    <button className="bg-[#f19c79] text-black px-4 py-1 rounded hover:bg-[#a44a3f] text-sm font-medium">
       Find it now
     </button>
   </div>
@@ -87,7 +106,7 @@ const Advertisement = () => {
           {filteredNeeds.map((need, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl shadow bg-white flex flex-col justify-between"
+              className="p-6 rounded-xl shadow bg-[#f6f4d2] flex flex-col justify-between"
             >
               <div>
                 <div className="font-bold text-xl">{need.Title}</div>
@@ -116,7 +135,7 @@ const Advertisement = () => {
                 <div className="text-sm text-gray-500 mt-1">
                   Contact: {need.Contact}
                 </div>
-                <button className="w-full mt-3 border border-gray-400 py-2 rounded font-bold hover:bg-gray-100">
+                <button className="w-full mt-3 border border-gray-400 bg-[#f19c79] py-2 rounded font-bold hover:bg-[#a44a3f]">
                   Help Now
                 </button>
               </div>

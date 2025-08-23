@@ -1,19 +1,22 @@
-import { CreditCard, BarChart3, PieChart } from "lucide-react";
+import { ClipboardList, CheckCircle, Megaphone } from "lucide-react";
 
 export const howItWorksData = [
   {
-    icon: CreditCard,
-    title: "1. Create Your Account",
-    description: "Get started in minutes with our simple and secure sign-up process.",
+    icon: ClipboardList,
+    title: "1. Submit Request",
+    description:
+      "Navigate to the AskHelp section and complete the form with your medical requirements for quick help.",
   },
   {
-    icon: BarChart3,
-    title: "2. Track Your Spending",
-    description: "Automatically categorize and track your transactions in real-time.",
+    icon: CheckCircle,
+    title: "2. Confirmation & Processing",
+    description:
+      "Our system validates your request and ensures it is properly categorized and processed efficiently.",
   },
   {
-    icon: PieChart,
-    title: "3. Get Insights",
-    description: "Receive AI-powered insights and recommendations to optimize your finances.",
+    icon: Megaphone,
+    title: "3. Publish & Promote",
+    description:
+      "To showcase your health advertisement on our banner, simply visit the Contact-Us page or Contact Number at footer below.",
   },
 ];

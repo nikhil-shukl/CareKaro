@@ -55,7 +55,7 @@ const Navbar = () => {
           >
             Testimonials
           </a>
-          <a href="#about" className="hover:text-black transition">
+          <a href="/aboutus" className="hover:text-black transition">
             About Us
           </a>
         </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           {/* About Button - only visible on small screens */}
           <a
-            href="#about"
+            href="/aboutus"
             className="text-gray-700 text-sm px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition md:hidden"
           >
             About Us

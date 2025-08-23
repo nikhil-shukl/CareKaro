@@ -39,8 +39,8 @@ const Navbar2 = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <Link to="/about" className="hover:text-black transition">
-            Testimonials
+          <Link to="/how-it-works" className="hover:text-black transition">
+            How It Works
           </Link>
           <Link to="/contactus" className="hover:text-black transition">
             Contact Us
@@ -48,27 +48,29 @@ const Navbar2 = () => {
         </div>
 
         {/* Buttons when on /advertisement */}
-        {location.pathname === "/advertisement" && (
-          <div className="flex items-center gap-3">
-            {/* Go Back Button */}
-            <button
-              onClick={() => navigate("/")}
-              className="bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition 
-                px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
-            >
-              Go Back
-            </button>
+      {/* Buttons when on /advertisement */}
+{location.pathname === "/advertisement" && (
+  <div className="flex items-center gap-2 md:gap-3">
+    {/* Go Back Button */}
+    <button
+      onClick={() => navigate("/")}
+      className="bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition 
+                 px-3 py-1 text-xs sm:text-sm md:px-5 md:py-2 md:text-base"
+    >
+      Go Back
+    </button>
 
-            {/* Ask Help Button */}
-        <button
+    {/* Ask Help Button */}
+    <button
       onClick={() => navigate("/askhelp")}
-      className="bg-blue-600 text-white rounded-full hover:opacity-90 transition 
-                 px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
+      className="bg-blue-500 text-white rounded-full hover:opacity-90 transition 
+                 px-3 py-1 text-xs sm:text-sm md:px-5 md:py-2 md:text-base"
     >
       Ask Help
     </button>
-          </div>
-        )}
+  </div>
+)}
+
       </nav>
     </header>
   );

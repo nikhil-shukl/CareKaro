@@ -17,7 +17,7 @@ const Carousal = () => {
     if (images.length > 0) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 4000); // 4 seconds per slide
+      }, 7000); // 4 seconds per slide
 
       return () => clearInterval(interval);
     }
