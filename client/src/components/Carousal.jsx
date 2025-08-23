@@ -6,9 +6,10 @@ const Carousal = () => {
 
   useEffect(() => {
     const urls = [
-      "./carousal2.jpeg",
+   
       "./images.jpeg",
       "./carousal4.jpeg",
+         "./carousal2.jpeg",
     ];
     setImages(urls);
   }, []);
@@ -17,8 +18,7 @@ const Carousal = () => {
     if (images.length > 0) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 7000); // 4 seconds per slide
-
+      }, 7000);
       return () => clearInterval(interval);
     }
   }, [images.length]);
@@ -26,12 +26,11 @@ const Carousal = () => {
   return (
     <>
       {images.length > 0 && (
-        <div className="relative w-full max-w-6xl mx-auto mt-5 overflow-hidden rounded-xl shadow-2xl">
+        <div className="relative w-full max-w-3xl sm:max-w-4xl md:max-w-5xl mx-auto mt-5 overflow-hidden rounded-xl shadow-2xl">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * 100}%)`,
-              height: "100%",
             }}
           >
             {images.map((imgSrc, index) => (
@@ -42,7 +41,7 @@ const Carousal = () => {
                 <img
                   src={imgSrc}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-40 sm:h-52 md:h-60 lg:h-64 object-cover rounded-lg"
+                  className="w-full h-auto max-h-72 sm:max-h-80 md:max-h-96 object-contain rounded-lg"
                 />
               </div>
             ))}
@@ -67,7 +66,7 @@ const Carousal = () => {
 
       {/* Loading fallback */}
       {images.length === 0 && (
-        <div className="w-full max-w-6xl h-40 sm:h-52 md:h-60 lg:h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 mx-auto mt-8">
+        <div className="w-full max-w-3xl sm:max-w-4xl md:max-w-5xl max-h-72 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500 mx-auto mt-8">
           Loading images...
         </div>
       )}
