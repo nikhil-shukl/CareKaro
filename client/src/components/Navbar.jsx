@@ -67,7 +67,7 @@ const Navbar = () => {
             href="#about"
             className="text-gray-700 text-sm px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition md:hidden"
           >
-            About
+            About Us
           </a>
 
           {/* Login / User button */}
