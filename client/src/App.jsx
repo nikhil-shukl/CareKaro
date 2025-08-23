@@ -2,12 +2,14 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Landing from "./pages/Landing";
-import Scanning from "./pages/Scanning";
+
 import NotFound from "./pages/NotFound";
 import ReportScanner from "./pages/ReportScanner";
 import Advertisement from "./pages/Advertisement";
 import ScrollToTop from "./components/ScrollToTop"; // <-- import
 import ProtectedRoute from "./components/ProtectedRoute"
+import ContactUs from "./pages/ContactUs";
+import AskHelp from "./pages/AskHelp";
 
 
 const App = () => {
@@ -17,9 +19,11 @@ const App = () => {
          <ScrollToTop /> {/* This ensures every page starts at top */}
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/scan" element={<Scanning />} />
+   
+              <Route path="/contactus" element={<ContactUs />} />
+                        <Route path="/askhelp" element={<AskHelp />} />
         <Route
-          path="/ReportScanner"
+          path="/reportscanner"
           element={
             <ProtectedRoute>
               <ReportScanner />
@@ -36,7 +40,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
         <Route path="*" element={<NotFound />} />
       </Routes>
 

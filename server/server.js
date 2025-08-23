@@ -5,6 +5,7 @@ import cors from "cors";
 import {connectDB} from "./config/db.js";
 // import cloudinary from "./config/cloudinary.js"; 
 import scanReportRoutes from "./routes/scanReportRoutes.js"; 
+import askHelpRoutes from "./routes/askHelpRoutes.js";
 
 
                                                            
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/scan-report", scanReportRoutes);
+app.use("/api/askhelp", askHelpRoutes);
 
 
 await connectDB();

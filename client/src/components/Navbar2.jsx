@@ -42,7 +42,7 @@ const Navbar2 = () => {
           <Link to="/about" className="hover:text-black transition">
             Testimonials
           </Link>
-          <Link to="/contact" className="hover:text-black transition">
+          <Link to="/contactus" className="hover:text-black transition">
             Contact Us
           </Link>
         </div>
@@ -60,12 +60,13 @@ const Navbar2 = () => {
             </button>
 
             {/* Ask Help Button */}
-            <button
-              className="bg-blue-600 text-white rounded-full hover:opacity-90 transition 
-                px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
-            >
-              Ask Help
-            </button>
+        <button
+      onClick={() => navigate("/askhelp")}
+      className="bg-blue-600 text-white rounded-full hover:opacity-90 transition 
+                 px-3 py-1 text-sm md:px-5 md:py-2 md:text-base"
+    >
+      Ask Help
+    </button>
           </div>
         )}
       </nav>

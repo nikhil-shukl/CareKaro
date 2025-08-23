@@ -1,22 +1,16 @@
-// components/Features.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { featuresData } from "../assets/featuresData";
+import { Stethoscope, FileText, BookOpen, MessageSquare, Megaphone, MapPin } from "lucide-react";
 
-// Import icons from lucide-react
-import { 
-  Stethoscope, 
-  FileText, 
-  BookOpen, 
-  Megaphone ,
-  MapPin
-} from "lucide-react";
-
-// Map icon names to actual Lucide icons
-const iconMap = { Stethoscope, FileText, BookOpen, Megaphone,MapPin };
+const iconMap = { Stethoscope, FileText, BookOpen, MessageSquare, Megaphone, MapPin };
 
 const Features = () => {
   const navigate = useNavigate();
+
+  const handleCardClick = (feature) => {
+    navigate(feature.route); // just navigate to the route
+  };
 
   return (
     <section id="features" className="py-4">
@@ -27,11 +21,11 @@ const Features = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuresData.map((feature, index) => {
-            const Icon = iconMap[feature.iconName]; // dynamically get icon
+            const Icon = iconMap[feature.iconName];
             return (
               <div
                 key={index}
-                onClick={() => navigate(feature.route)}
+                onClick={() => handleCardClick(feature)}
                 className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer flex flex-col items-start space-y-4"
               >
                 {Icon && <Icon className="h-8 w-8 text-blue-600" />}
@@ -47,4 +41,3 @@ const Features = () => {
 };
 
 export default Features;
-

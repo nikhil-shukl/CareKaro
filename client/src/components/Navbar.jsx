@@ -13,11 +13,9 @@ const Navbar = () => {
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
-      // Scrolling down → hide
-      setShow(false);
+      setShow(false); // scrolling down → hide
     } else {
-      // Scrolling up → show
-      setShow(true);
+      setShow(true); // scrolling up → show
     }
     setLastScrollY(window.scrollY);
   };
@@ -33,20 +31,49 @@ const Navbar = () => {
         show ? "translate-y-0" : "-translate-y-24"
       }`}
     >
-      <nav className="px-6 py-3 flex items-center justify-between">
+      <nav className="px-4 sm:px-6 py-3 flex items-center justify-between">
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/navbar.png" alt="Logo" className="h-10 w-auto object-contain" />
+          <img
+            src="/navbar.png"
+            alt="Logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
-          <a href="#services" className="hover:text-black transition">All Features</a>
-          <a href="#testimonials" className="hover:text-black transition">About Us</a>
+          <a
+            href="#hospital-map"
+            className="hover:text-black transition"
+          >
+            Nearby Hospitals
+          </a>
+          <a
+            href="#testimonial"
+            className="hover:text-black transition"
+          >
+            Testimonials
+          </a>
+          <a href="#about" className="hover:text-black transition">
+            About Us
+          </a>
         </div>
 
-        <div className="flex items-center space-x-4">
+        {/* Right Side Buttons */}
+        <div className="flex items-center space-x-2">
+          {/* About Button - only visible on small screens */}
+          <a
+            href="#about"
+            className="text-gray-700 text-sm px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition md:hidden"
+          >
+            About
+          </a>
+
+          {/* Login / User button */}
           <SignedOut>
             <SignInButton mode="modal">
-              <button className="bg-black text-white px-5 py-2 rounded-full hover:opacity-80 transition">
+              <button className="bg-black text-white px-4 py-1 rounded-full hover:opacity-80 transition text-sm md:text-base">
                 Login
               </button>
             </SignInButton>
@@ -67,3 +94,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
