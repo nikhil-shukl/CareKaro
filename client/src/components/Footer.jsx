@@ -153,11 +153,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-white text-lg font-semibold mb-4">Disclaimer</h3>
           <p className="text-sm leading-relaxed text-gray-300">
-            This platform was built for the Mumbai Hackathon 2025, focusing on
-            Track 2 of HealthTech. All names used are fictitious and generated
-            by AI agents; no personal sentiments are intended or harmed.
-            Everything presented in the advertisement section is purely
-            fictional till its development mode.
+           This platform was built for ENIGMA 4.0: A Web Development Hackathon (Track 2 – HealthTech) at SIES Graduate School of Technology, Navi Mumbai. All names, data, and content are fictitious and generated during development. No personal sentiments are intended or harmed.
           </p>
         </div>
       </div>

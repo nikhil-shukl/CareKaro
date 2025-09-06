@@ -169,10 +169,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 
 HOW TO SWITCH
 1) Save this file as src/components/HospitalMapLeaflet.jsx
-2) In App.jsx replace import HospitalMap from './components/HospitalMap' with:
-   import HospitalMap from './components/HospitalMapLeaflet'
-3) Remove @googlemaps/js-api-loader dependency if you want:
-   npm remove @googlemaps/js-api-loader
+2) In App.jsx import HospitalMap from './components/HospitalMapLeaflet'
 
 NOTES
 - Overpass API is free but has rate limits; for heavy production use consider Mapbox or paid providers.
