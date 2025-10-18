@@ -29,7 +29,7 @@ const Footer = () => {
                   href="tel:91-8652440318"
                   className="text-blue-300 hover:underline"
                 >
-                  +91-8652440318
+                  +91-xxxxxxxxxx
                 </a>
               </span>
             </div>
@@ -153,7 +153,10 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-white text-lg font-semibold mb-4">Disclaimer</h3>
           <p className="text-sm leading-relaxed text-gray-300">
-           This platform was built for ENIGMA 4.0: A Web Development Hackathon (Track 2 – HealthTech) at SIES Graduate School of Technology, Navi Mumbai. All names, data, and content are fictitious and generated during development. No personal sentiments are intended or harmed.
+          Mumbai becomes the arena for AI innovation, where Agentic AI is at the forefront.
+This platform was built for Mumbai Hack (Track 2 – HealthTech) held in Mumbai.
+All names, data, and content are fictitious and generated during development.
+No personal sentiments are intended or harmed.
           </p>
         </div>
       </div>
